@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'jquery-rails'
+gem 'simple_form'
+gem 'devise'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

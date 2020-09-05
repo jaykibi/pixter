@@ -1,0 +1,18 @@
+<br />
+<div class="booyah-box col-8 offset-2">
+  <h2>Log in</h2>
+  <br />
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email, required: false, autofocus: true %>
+      <%= f.input :password, required: false %>
+    </div>
+    <br />
+    <div class="form-actions">
+      <%= f.button :submit, "Log in", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+  <br />
+  <%= render "devise/shared/links" %>
+  <br />
+</div>

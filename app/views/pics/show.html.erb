@@ -1,9 +1,9 @@
 
-        <div class="col-lg-3 col-md-4 col-6">
+        <div class="col-8 offset-2">
             
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/2gYsZUmockw/400x300" alt="">
-            </a>
+            
+            <%= image_tag @pic.image.to_s, class: 'img-fluid'%>
+            
             <p>
                <%= @pic.caption %> 
             </p>

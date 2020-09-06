@@ -1,7 +1,7 @@
 class PicsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create]
     def index
-        @pics = Pic.last(12)
+        @pics = Pic.last(12).reverse
     end
 
     def new
@@ -24,6 +24,6 @@ class PicsController < ApplicationController
     private
     
     def pic_params
-        params.require(:pic).permit(:caption)
+        params.require(:pic).permit(:caption, :image)
     end
 end

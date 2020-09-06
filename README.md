@@ -4,6 +4,7 @@
 Howdy! This is my submission for the Shopify internship position. 
 
 [Demo the website here](https://pixter-by-kibi.herokuapp.com/)
+<br />
 [Watch a video demo here](https://youtu.be/A_yw87hhKVI)
 
 

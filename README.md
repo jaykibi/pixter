@@ -18,7 +18,7 @@ Currently, users on my live app are able to **create an account** and **upload**
 
 ## Working Updates:
 
-### *AS OF 9/7/20:* Added delete functionality to repo. Users are now ableto delete photos that they themselves have uploaded to the app.
+### *AS OF 9/7/20:* Added DELETE functionality to repo. Users are now ableto delete photos that they themselves have uploaded to the app.
 
 ** 
 

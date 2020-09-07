@@ -1,5 +1,6 @@
 
 
+
 # README
 
 Howdy! This is my submission for the Shopify internship position. 
@@ -12,6 +13,12 @@ Howdy! This is my submission for the Shopify internship position.
 We(prospective interns) were tasked with creating an image repository. It was an open ended project, the main items Shopify wanted were looking for were: a **Search** function, **Add** image, **Delete** image, and **Sell/Buy** image function. 
 
 Currently, users on my live app are able to **create an account** and **upload** (**ADD**) pictures, which are then displayed on the homepage as clickable images. 
+
+**
+
+### *AS OF 9/7/20:* Added delete functionality to repo. Users are now ableto delete photos that they themselves have uploaded to the app.
+
+** 
 
 Users are current required to sign up in order to upload an image. 
 

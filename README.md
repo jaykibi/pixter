@@ -36,20 +36,25 @@ Important specs:
 
 This will create the database and will run the migrations needed in order for them to function as expected. 
 
-* For storage, in order to keep it simple and use the development environment to store the images, comment out line 8 of app/uploaders/image_uploader.rb so this file should look kind of like this:
+* For storage, in order to keep it simple and use the development environment to store the images, comment out line 8 (storage :fog) app/uploaders/image_uploader.rb.
 
-  # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+* Otherwise you can set up an Amazon AWS S3 bucket to store the image in the cloud. I have everything already set up so all you would need to do, is create the AWS S3 bucket and create an AWS ACCESS and AWS SECRET KEY. Then you would run this command in terminal: 
+	* $ bundle exec figaro install
 
-  # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+This command will create a file located at config/application.yml
 
-  # Override the directory where uploaded files will be stored.
-  # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
+In this file you put these items: 
+
+AWS_ACCESS_KEY: "insert access key"
+<br />
+AWS_SECRET_KEY: "insert secret key"
+<br />
+AWS_BUCKET: "insert name of bucket"
+<br />
+
+Make sure to insert your specific access and secret key where it says to. Also insert the name of your S3 bucket, keep in mind this name must be the exact same as you have it on AWS, it is CASE SENSITIVE. 
+
+Once you complete all these steps you should be able to upload images in the same fashion, however the images will now be stored in the AWS cloud. 
+
 
 Enjoy! :)

@@ -46,11 +46,11 @@ This command will create a file located at config/application.yml
 
 In this file you put these items: 
 
-AWS_ACCESS_KEY: "insert access key"
+`AWS_ACCESS_KEY: "insert access key"`
 <br />
-AWS_SECRET_KEY: "insert secret key"
+`AWS_SECRET_KEY: "insert secret key"`
 <br />
-AWS_BUCKET: "insert name of bucket"
+`AWS_BUCKET: "insert name of bucket"`
 <br />
 
 Make sure to insert your specific access and secret key where it says to. Also insert the name of your S3 bucket, keep in mind this name must be the exact same as you have it on AWS, it is CASE SENSITIVE. 

@@ -1,4 +1,5 @@
 
+
 # README
 
 Howdy! This is my submission for the Shopify internship position. 
@@ -31,15 +32,15 @@ Important specs:
 * PostGreSQL database is used for this project, so make sure you download and install [PostGreSQL](https://www.postgresql.org/download/windows/) on your machine. 
 
 * In order to initialize your database, make sure to pull the code down and run these in terminal:
-	* $ rake db:create 
-	* $ rake db:migrate
+	* `$ rake db:create` 
+	* `$ rake db:migrate`
 
 This will create the database and will run the migrations needed in order for them to function as expected. 
 
-* For storage, in order to keep it simple and use the development environment to store the images, comment out line 8 (storage :fog) app/uploaders/image_uploader.rb. Make sure the line that says "storage :file" is NOT commented out for this to work. 
+* For storage, in order to keep it simple and use the development environment to store the images, comment out line 8 (`storage :fog`) app/uploaders/image_uploader.rb. Make sure the line that says "`storage :file`" is NOT commented out for this to work. 
 
 * Otherwise you can set up an [Amazon AWS S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html) to store the image in the cloud. I have everything already set up so all you would need to do, is create the AWS S3 bucket and create an AWS ACCESS and AWS SECRET KEY. Then you would run this command in terminal: 
-	* $ bundle exec figaro install
+	* `$ bundle exec figaro install`
 
 This command will create a file located at config/application.yml
 

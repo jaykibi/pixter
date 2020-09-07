@@ -1,10 +1,11 @@
 
-        <div class="col-8 offset-2">
-            
-            
-            <%= image_tag @pic.image.to_s, class: 'img-fluid'%>
-            
-            <p>
-               <%= @pic.caption %> 
-            </p>
-        </div>   
+<div class="col-8 offset-2">
+    <%= image_tag @pic.image.to_s, class: 'img-fluid'%>
+    <p>
+        <%= @pic.caption %> 
+    </p>
+    <%= link_to @pic, method: "delete" do %>
+        <button type="button" class="btn btn-danger">Delete Photo</button>
+    <% end %>
+</div>   
+

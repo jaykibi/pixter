@@ -38,7 +38,7 @@ This will create the database and will run the migrations needed in order for th
 
 * For storage, in order to keep it simple and use the development environment to store the images, comment out line 8 (storage :fog) app/uploaders/image_uploader.rb. Make sure the line that says "storage :file" is NOT commented out for this to work. 
 
-* Otherwise you can set up an Amazon AWS S3 bucket to store the image in the cloud. I have everything already set up so all you would need to do, is create the AWS S3 bucket and create an AWS ACCESS and AWS SECRET KEY. Then you would run this command in terminal: 
+* Otherwise you can set up an [Amazon AWS S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html) to store the image in the cloud. I have everything already set up so all you would need to do, is create the AWS S3 bucket and create an AWS ACCESS and AWS SECRET KEY. Then you would run this command in terminal: 
 	* $ bundle exec figaro install
 
 This command will create a file located at config/application.yml

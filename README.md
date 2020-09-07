@@ -36,4 +36,20 @@ Important specs:
 
 This will create the database and will run the migrations needed in order for them to function as expected. 
 
+* For storage, in order to keep it simple and use the development environment to store the images, comment out line 8 of app/uploaders/image_uploader.rb so this file should look kind of like this:
+
+  # Include RMagick or MiniMagick support:
+  # include CarrierWave::RMagick
+  # include CarrierWave::MiniMagick
+
+  # Choose what kind of storage to use for this uploader:
+  storage :file
+  # storage :fog
+
+  # Override the directory where uploaded files will be stored.
+  # This is a sensible default for uploaders that are meant to be mounted:
+  def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+
 Enjoy! :)

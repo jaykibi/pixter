@@ -1,6 +1,7 @@
 
 
 
+
 # README
 
 Howdy! This is my submission for the Shopify internship position. 
@@ -18,7 +19,11 @@ Currently, users on my live app are able to **create an account** and **upload**
 
 ## Working Updates:
 
-### *AS OF 9/7/20:* Added DELETE functionality to repo. Users are now able to delete photos that they themselves have uploaded to the app.
+
+### AS OF 9/10/20: Added SEARCH functionality to app. Users can now search for keywords and be displayed a resulting page if user's query resembled items in a picture's caption field. 
+
+### *AS OF 9/7/20:* Added DELETE functionality to app. Users are now able to delete photos that they themselves have uploaded to the app.
+
 
 ** 
 

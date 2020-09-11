@@ -1,0 +1,16 @@
+<h1> Search Results <h1>
+
+<div class="row text-center text-lg-left">
+
+<% @pics.each do |pic| %>
+
+    <div class="col-lg-3 col-md-4 col-6">
+        <%= link_to pic_path(pic.id), class:'d-block mb-4 h-100' do %>
+           
+            <%= image_tag pic.image.to_s, class: 'img-fluid img-thumbnail', alt: pic.caption%>
+
+        <% end %>
+    </div>    
+
+<% end %>
+</div>

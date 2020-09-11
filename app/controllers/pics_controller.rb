@@ -31,6 +31,10 @@ class PicsController < ApplicationController
         end
     end
 
+    def search
+        @pics = Pic.where("caption LIKE ?", "%" + params[:q] + "%")
+    end
+
     private
     
     def pic_params

@@ -2,6 +2,7 @@ class PicsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :destroy]
     def index
         @pics = Pic.last(12).reverse
+        @current_user = current_user
     end
 
     def new

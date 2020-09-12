@@ -1,85 +1,65 @@
-<!-- Page Content -->
-
 <div class="container">
+  <!-- NAV BAR -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <%= link_to root_path, class: 'navbar-brand' do %>
+          pixter by kibi
+    <% end %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item">
+              <%= link_to new_pic_path, class: 'nav-link' do %>
+                  <button type="button" class="btn btn-info btn-sm">
+                      Upload
+                  </button>
+              <% end %>
+          </li>
+          <li class="nav-item">
+              <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link' do %>
+                  <button type="button" class="btn btn-danger btn-sm">
+                      Log Out
+                  </button>
+              <% end %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+              <%= link_to new_user_registration_path, class: 'nav-link' do %>
+                  <button type="button" class="btn btn-primary btn-sm">
+                      Sign Up
+                  </button>
+              <% end %>
+          </li>
+          <li class="nav-item">
+              <%= link_to new_user_session_path, class: 'nav-link' do %>
+                  <button type="button" class="btn btn-info btn-sm">
+                      Log In
+                  </button>
+              <% end %>
+          </li>
+        <% end %>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="/search">
+        <input name="q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-  
-  <%= link_to root_path, class: 'navbar-brand' do %>
-        pixter by kibi
-  <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      
-      <% if user_signed_in? %>
-
-        <li class="nav-item">
-            <%= link_to new_pic_path, class: 'nav-link' do %>
-                <button type="button" class="btn btn-info btn-sm">
-                    Upload
-                </button>
-            <% end %>
-        </li>
-
-        <li class="nav-item">
-            <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link' do %>
-                <button type="button" class="btn btn-danger btn-sm">
-                    Log Out
-                </button>
-            <% end %>
-        </li>
-
-      <% else %>
-
-        <li class="nav-item">
-            <%= link_to new_user_registration_path, class: 'nav-link' do %>
-                <button type="button" class="btn btn-primary btn-sm">
-                    Sign Up
-                </button>
-            <% end %>
-        </li>
-
-        <li class="nav-item">
-            <%= link_to new_user_session_path, class: 'nav-link' do %>
-                <button type="button" class="btn btn-info btn-sm">
-                    Log In
-                </button>
-            <% end %>
-        </li>
+  <br />
+  <!-- Page Content -->
+    <hr class="mt-2 mb-5">
+    <div class="row text-center text-lg-left">
+      <% @pics.each do |pic| %>
+          <div class="col-lg-3 col-md-4 col-6">
+              <%= link_to pic_path(pic.id), class:'d-block mb-4 h-100' do %>
+                
+                  <%= image_tag pic.image.to_s, class: 'img-fluid img-thumbnail', alt: pic.caption%>
+              <% end %>
+          </div>    
 
       <% end %>
-
-      
-    </ul>
-
-    <form class="form-inline my-2 my-lg-0" action="/search">
-      <input name="q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-
-  </div>
-</nav>
-<br />
-  <hr class="mt-2 mb-5">
-
-  <div class="row text-center text-lg-left">
-
-    <% @pics.each do |pic| %>
-
-        <div class="col-lg-3 col-md-4 col-6">
-            <%= link_to pic_path(pic.id), class:'d-block mb-4 h-100' do %>
-               
-                <%= image_tag pic.image.to_s, class: 'img-fluid img-thumbnail', alt: pic.caption%>
-
-            <% end %>
-        </div>    
-
-    <% end %>
-  </div>
-
-
-<!-- /.container -->
+    </div>
+</div>

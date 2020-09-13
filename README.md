@@ -19,6 +19,7 @@ Currently, users on my live app are able to **create an account** and **upload**
 
 ## Working Updates:
 
+### AS OF 9/13/20: Front end updated, looks more modern now and now gives validated user option to delete photo straight from index page. (new demo and code video coming soon) 
 
 ### AS OF 9/10/20: Added SEARCH functionality to app. Users can now search for keywords and be displayed a resulting page if user's query resembled items in a picture's caption field. 
 

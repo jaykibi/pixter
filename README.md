@@ -8,7 +8,7 @@ Howdy! This is my submission for the Shopify internship position.
 
 [Demo the website here](https://pixter-by-kibi.herokuapp.com/)
 <br />
-[Watch a video demo here](https://youtu.be/A_yw87hhKVI)
+[Watch a video demo here](https://youtu.be/p-ujSMncWQ8)
 
 
 We(prospective interns) were tasked with creating an image repository. It was an open ended project, the main items Shopify wanted were looking for were: a **Search** function, **Add** image, **Delete** image, and **Sell/Buy** image function. 

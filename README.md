@@ -30,7 +30,7 @@ Currently, users on my live app are able to **create an account** and **upload**
 
 ** 
 
-Users are current required to sign up in order to upload an image. 
+Users are currently required to sign up in order to upload an image. 
 
 ![Alt Text](https://media0.giphy.com/media/j6waPdTZBTfNR19TVJ/giphy.gif)
 

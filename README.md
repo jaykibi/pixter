@@ -11,8 +11,6 @@ Howdy All! Please feel free to clone this repo and do whatever you want with it!
 [Watch a video demo here](https://youtu.be/p-ujSMncWQ8)
 
 
-We(prospective interns) were tasked with creating an image repository. It was an open ended project, the main items Shopify wanted were looking for were: a **Search** function, **Add** image, **Delete** image, and **Sell/Buy** image function. 
-
 Currently, users on my live app are able to **create an account** and **upload** (**ADD**) pictures, which are then displayed on the homepage as clickable images. 
 
 **

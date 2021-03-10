@@ -4,7 +4,7 @@
 
 # README
 
-Howdy! This is my submission for the Shopify internship position. 
+Howdy All! Please feel free to clone this repo and do whatever you want with it! 
 
 [Demo the website here](https://pixter-by-kibi.herokuapp.com/)
 <br />
